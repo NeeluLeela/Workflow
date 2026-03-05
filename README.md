@@ -237,5 +237,5 @@ All list endpoints accept `?page=1&limit=20` and return:
 - SLA checker uses in-process `setInterval` — use external scheduler for multi-instance deployments
 - No real-time updates (WebSocket/SSE) — frontend refreshes on navigation
 - No file attachments, email notifications, or webhook integrations
-- JWT tokens don't expire — add `expiresIn` for production
+- JWT tokens expire after 1 hour — no refresh token mechanism yet
 - No role hierarchy — ADMIN doesn't auto-inherit APPROVER permissions for approval decisions
